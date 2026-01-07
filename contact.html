@@ -1,0 +1,100 @@
+<!--
+Copilot instructions:
+
+Create an accessible contact page in German.
+connect css file
+
+Include:
+- Contact form (mocked)
+- Name, email, message fields
+- Proper labels for screen readers
+- Keyboard accessibility
+- Clear submit button
+- No backend logic
+
+Ensure form usability and WCAG compliance.
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/contact.css">
+</head>
+<body>
+<header>
+    <a href="./index.html"><img src="./img/logo.png" alt="SaaS Webshop Logo" height="30px"></a>
+    <nav aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="./index.html">Startseite</a></li>
+            <li><a href="./index.html#pricing">Preise</a></li>
+            <li><a href="./about.html">Über uns</a></li>
+            <li><a href="./contact.html" aria-current="page">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div>
+        <button id="language-switcher" aria-label="Sprache wechseln">DE</button>
+    </div>
+</header>
+<main>
+    <section class="contact1">
+        <div class="contact-inhalt">
+            <h1>Der Kontaktbereich, der neue Wege öffnet.</h1>
+            <div>
+                <p>Wir freuen uns, von Ihnen zu hören! Bitte füllen Sie das untenstehende Formular aus, um uns eine Nachricht zu senden. Wir werden uns so schnell wie möglich bei Ihnen melden.</p>
+                <p>Wir sind da: für Fragen, Anregungen oder Unterstützung.</p>
+                <h2>E-Mail: support@saaaswebshop.com</h2>
+                <h2>Telefon: +43 123 456 789</h2>
+                <h2>Adresse: Vienna, Austria</h2>
+            </div>
+        </div>
+        <img src="./img/contactimg.jpg" alt="Illustration Kontaktformular" width="100%"/>
+    </section>
+    <section aria-labelledby="contact-heading">
+        <form action="#" method="post" aria-describedby="form-instructions">
+            <div class="contact-heading">
+                <h2>Kontaktieren Sie uns</h2>
+                <p id="form-instructions">Bitte füllen Sie das folgende Formular aus, um uns eine Nachricht zu senden.</p>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Absenden</button>
+            </div>
+        </form>
+    </section>
+</main>
+<footer id="contact" aria-labelledby="contact-heading">
+    <div>
+    <h2 id="contact-heading">Kontaktieren Sie uns</h2>
+    <p>Bei Fragen stehen wir Ihnen gerne zur Verfügung. <br> Schreiben Sie uns eine E-Mail an <a href="mailto:support@flowtrack.com">support@flowtrack.com</a>.</p>
+    </div>
+    <nav aria-label="Footer Navigation">
+        <ul>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="privacy.html">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="barrierefreiheit.html">Barrierefreiheitserklärung</a></li>
+            <li><a href="license.html">Lizenz</a></li>
+        </ul>
+    </nav>
+    <p>© 2026 FlowTrack SaaS Webshop. Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+</html>
